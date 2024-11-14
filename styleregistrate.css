@@ -1,0 +1,192 @@
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    margin: 0;
+    background-image: url('ConejosyZanahoria.jfif');
+    background-size: cover; /* Ajustar el tamaño de la imagen para cubrir el fondo */
+    background-repeat: no-repeat; /* Evitar repetir la imagen de fondo */
+    min-height: 100vh; /* Establecer altura mínima de la vista para evitar desbordamiento */
+}
+
+.boton-volver {
+    font-family: "Playfair Display", serif;
+    color: rgb(206, 77, 17);
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(206, 77, 17);
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    text-align: center; /* Centrar el título */
+}
+
+form {
+    background-color: rgb(238, 171, 116); /* Fondo Naranja */
+    padding: 20px;
+    margin: 0 auto; /* Centrar el formulario */
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+label {
+    display: block;
+    font-family: "Playfair Display", serif;
+    color: rgb(206, 77, 17);
+    text-align: left; /* Alinear etiquetas a la izquierda */
+}
+
+select {
+    color: rgb(206, 77, 17); /* Color de texto de las opciones */
+    font-family: "Playfair Display", serif;
+}
+
+option {
+    color: rgb(206, 77, 17); /* Color de texto de las opciones */
+    font-family: "Playfair Display", serif;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: rgb(181, 228, 120); /* Color de fondo del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(255, 230,0); /* Cambiar color al pasar el mouse */
+}
+
+footer {
+    background-color: rgb(238, 171, 116); /* Color de fondo para el footer */
+    padding: 10px; /* Espacio interno en el footer */
+    margin-top: 5%;
+    font-family: "Playfair Display", serif;
+    animation-name: cambiarColor;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambiarColor {
+    0% {
+        background-color: rgb(229, 191, 191);
+    }
+    25% {
+        background-color: rgb(72, 167, 65);
+    }
+    50% {
+        background-color: rgb(204, 216, 218);
+    }
+    75% {
+        background-color: rgb(127, 255, 212);
+    }
+    100% {
+        background-color: rgb(229, 191, 191);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; /* Espacio a los lados del contenido */
+    }
+
+    form {
+        width: 50%;
+        max-width: 600px;
+        margin-bottom: 80px;
+    }
+
+    footer {
+        position: relative; /* Cambia a position: relative en lugar de fixed */
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    form {
+        width: 50%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+
+    footer {
+        position: relative; /* Cambia a position: relative en lugar de fixed */
+    }
+}
+
+@media screen and (max-width: 930px) {
+    form {
+        max-width: 300px;
+    }
+    footer {
+        position: relative; /* Cambia a position: relative en lugar de fixed */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    form {
+        padding: 10px;
+        max-width: 500px;
+        max-height: 680px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+
+@media screen and (max-width: 450px) and (min-width: 400px) {
+    form {
+        max-width: 320px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+    
+
+@media screen and (min-width: 300px) and (max-width: 390px) {
+    form {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+
+    footer {
+        position: relative; /* Cambia a position: relative en lugar de fixed */
+    }
+
+  
+    
+}
