@@ -1,4 +1,4 @@
-# Bigotes 🐰
+# Bigotes 🐰.
 
 **Bigotes** es un proyecto dedicado a la **educación y cuidado de conejos**. Este sitio web tiene como objetivo proporcionar información sobre la 
 **alimentación**, **cuidado** y **bienestar** de los conejos, especialmente aquellos que han sido **rescatados** en la ciudad de **CABA, Argentina**. 
