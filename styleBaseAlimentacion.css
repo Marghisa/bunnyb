@@ -1,0 +1,100 @@
+body {
+    font-family: 'Sofia';
+    font-size: 18px;
+    background-image: url("Fondo3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(228, 224, 226, 0.885);
+    margin-bottom: 2%;
+    height: 70px;
+}
+
+h3, p {
+    color: #512305;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(203, 183, 193, 0.885);
+    position: relative;
+    padding-top: 20px;
+    margin-top: 10%;
+}
+
+footer img {
+    height: 50px;
+    width: 100px;
+}
+
+/* Contenedor principal */
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    padding: 0 5%;
+    gap: 20px;
+}
+
+/* Estilos para las cards */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 500px;
+    border: 2px solid #933838;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Imagen dentro de la card */
+.card img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5%;
+}
+
+/* Inicialmente ocultar las imágenes */
+.image-container {
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.image-container.four {
+    margin-top: -20px; /* Ajusta este valor según lo que necesites */
+}
+
+/* Mostrar las imágenes cuando son visibles */
+.image-container.show {
+    display: block;
+}
+
+/* Estilos para la card one y three */
+.card.one, .card.three {
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card, .image-container {
+        width: 100%;
+    }
+}
