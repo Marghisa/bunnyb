@@ -1,55 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Playfair Display", serif;
   margin: 0;
   padding: 0;
-  font-family: "Playfair Display", serif;
 }
 
-.h2 {
-  font-family: "Playfair Display", serif;
+/* Estilos del Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: left; /* Cambié de center a left */
+  transition: background-color 0.3s ease;
+  border: none; /* Quitar el borde del header */
+  display: flex;
+  justify-content: space-between; /* Alineación de logo y menú */
+  align-items: center;
+  padding-left: 20px; /* Alineación del logo y menú a la izquierda */
 }
 
-
-.menu_item ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+header .menu_item {
+  display: flex;
+  gap: 20px;
 }
 
-.menu_item li {
-  display: inline-block; /* Mostrar los elementos de la lista en línea */
-  white-space: nowrap; /* Evitar saltos de línea en palabras largas */
-  margin-right: 10px; /* Espacio entre los elementos de la lista */
-  font-size: 14px;
-}
-
-.menu_item a {
+header .menu_item a {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 1.2em;
 }
 
-
-header a {
-  outline: none;
-  text-decoration: none;
-  padding: 2px 1px 0;
+header.scrolled {
+  background-color: #000;
 }
 
-header a:link {
-  color: #152a05;
-}
-
-header a:visited {
-  color: #311605;
-}
-
-.menu {
-  text-align: center;
-}
-
+/* Estilos para el Carrusel de imágenes */
 .carousel {
   position: relative;
-  width: 100%; /* Mantener el ancho completo */
-  margin: 0 auto; /* Centrar el carrusel */
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -59,273 +53,196 @@ header a:visited {
 }
 
 .slide {
-  min-width: 100%; /* Cada imagen ocupa el ancho completo del carrusel */
-  position: relative; /* Hacer que el contenedor de la imagen sea relativo */
-}
-
-.caption {
-  position: absolute; /* Posicionar el texto sobre la imagen */
-  bottom: 40px; /* Aumentar la distancia desde la parte inferior */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Centrar el texto */
-  background: none; /* Sin fondo */
-  color: white; /* Color del texto */
-  padding: 0; /* Sin espaciado interno */
-  font-size: 4.5em; /* Aumentar tamaño de fuente */
-  text-align: center; /* Alinear texto al centro */
-  text-shadow: none; /* Remover sombra */
-  font-weight: bold; /* Hacer el texto más destacado */
-  letter-spacing: 1px; /* Espaciado entre letras para mejor legibilidad */
+  min-width: 100%;
+  position: relative;
 }
 
 .slide img {
-  width: 100%; /* Asegurar que la imagen ocupe el 100% del ancho del slide */
-  height: auto; /* Mantener la altura automática para preservar la relación de aspecto */
-  max-height: 80vh; /* Aumentar la altura máxima a 80vh */
-  object-fit: cover; /* Mantener la relación de aspecto */
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
 }
 
-input[type="radio"] {
-  display: none; /* Ocultar los botones de radio */
-}
-
-#slide1:checked ~ .slides {
-  transform: translateX(0);
-}
-
-#slide2:checked ~ .slides {
-  transform: translateX(-100%);
-}
-
-#slide3:checked ~ .slides {
-  transform: translateX(-200%);
-}
-
-.navigation {
+.caption {
   position: absolute;
-  bottom: 10px; /* Colocar los botones debajo */
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-}
-
-.dot {
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="radio"]:checked + label {
-  background: #717171; /* Color del punto activo */
-}
-
-
-main {
-  width: 60%; /* El artículo ocupa el 60% */
-  height: max-content;
-  color: #d87436;
-  background-color: rgb(186, 236, 182);
-  display: flex;
-  flex-direction: column; /* Alinear elementos verticalmente */
-}
-
-main h2 {
-  font-family: "Audiowide", sans-serif; /* Fuente del título */
-  color: #d87436; /* Color del texto */
-  text-align: center; /* Centrar el texto */
-  margin: 20px 0; /* Espacio arriba y abajo del título */
-}
-
-.card-container {
-  display: flex; /* Usar Flexbox para alinear las tarjetas horizontalmente */
-  flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en pantallas más pequeñas */
-  
-}
-
-.card-text {
-  font-family: 'Playfair Display', serif; /* Usar la fuente Playfair Display */
-  color: #333; /* Color del texto */
-  font-size: 1.2em; /* Tamaño del texto */
-}
-
-h4 {
-  font-family: "Playfair Display", serif;
-}
-
-
-section {
-  width: 40%; /* El section ocupa el 40% */
-  color: beige;
-  background-color: antiquewhite;
-  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 4.5em;
+  font-weight: bold;
   text-align: center;
-  color: #d87436;
-  align-items: center;
 }
 
 
-.contenido {
-  display: flex; /* Usar Flexbox para alinear el artículo y el aside */
-  justify-content: space-between; /* Espacio entre los elementos */
-  width: 100%; /* Ancho completo */
-}
-
-
-/* Carrusel de tarjetas */
+/* Carrusel de Cards */
 .carouselcone {
   position: relative;
-  width: 100%; /* Mantener el ancho completo */
-  overflow: hidden; /* Ocultar las tarjetas que están fuera del área visible */
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.slidescone {
-  transition: transform 0.5s ease; /* Transición suave al cambiar de slide */
-  width: 100%;
+.cards-container {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .slidecone {
-  display: flex; /* Usar Flexbox para alinear las tarjetas dentro del slide */
-  min-width: 100%; /* Cada slide ocupa el ancho completo del carrusel */
+  display: flex;
+  min-width: 100%;
   position: relative;
-
 }
 
 .card {
-  background-color: #f9f9f9; /* Color de fondo de la tarjeta */
-  border: 1px solid #ddd; /* Borde de la tarjeta */
-  border-radius: 8px; /* Bordes redondeados */
-  width: calc(24% - 10px); /* Ajustar el ancho de la tarjeta */
-  margin: 5px; /* Margen alrededor de las tarjetas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+  background-color: #e6ede9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(24% - 10px); /* 5 cards by row */
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .card img {
-  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
-  height: auto; /* Mantener la relación de aspecto */
-}
-
-
-footer {
-  display: block;
-  background-color: rgba(203, 183, 193, 0.885);
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer img {
-  height: 20px;
-  width: 20px;
-}
-
-.fondo {
   width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-text {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.contenido {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  animation-name: cambiarColor;
-  animation-duration: 10s;
-  animation-delay: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column;
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 10px; 
 }
 
-@keyframes cambiarColor {
-  0% {
-      background-color: rgb(229, 191, 191);
-  }
-  25% {
-      background-color: rgb(72, 167, 65);
-  }
-  50% {
-      background-color: rgb(204, 216, 218);
-  }
-  75% {
-      background-color: rgb(127, 255, 212);
-  }
-  100% {
-      background-color: rgb(229, 191, 191);
-  }
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ece4e4; 
 }
 
-.fondo a {
-  margin-right: 1%;
+/* Botones de navegación */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Botones de radio dentro de las imágenes */
+.carousel .slide {
+  position: relative; 
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px; /* Coloca los radios cerca de la parte inferior de la imagen */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.navigation input {
+  display: none;
+}
+
+.navigation label {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation input:checked + label {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(210, 195, 207);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer .footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .footer-logos img {
+  width: 30px;
+  height: auto;
+}
+
+footer b {
+  font-size: 1.2em;
+}
+
+/* Media Queries */
 @media (max-width: 1280px) {
   .menu_item {
-      font-size: 10px;
-      align-items: center;
+    font-size: 10px;
   }
 }
 
-
 @media (max-width: 1024px) {
-  .menu_item {
-      font-size: 12px;
-      align-items: center;
-  }
   .contenido {
     flex-direction: column;
   }
 
   main {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: rgb(186, 236, 182);
+    width: 100%;
   }
-
-  section {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: antiquewhite;
-  }
-
 }
 
 @media (max-width: 930px) {
-  .menu_item {
-      font-size: 12px;
-      align-items: center;
-  }
   .contenido {
     flex-direction: column;
   }
 
   main {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: rgb(186, 236, 182);
+    width: 100%;
   }
-
-  section {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: antiquewhite;
-  }
-
 }
 
 @media (max-width: 768px) {
-  
-  .logo {
-    padding-top: 2%;
-  }
-  
-  .menu_item {
-    font-size: 14px;
-    align-items: center;
-  }
-
-
-  .slidescone {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
   footer {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -333,30 +250,22 @@ footer img {
 }
 
 @media (min-width: 400px) and (max-width: 430px) {
-  
-  .logo {
-    width: 10%;
-  }
-
   .menu_item ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .menu_item li {
-    display: inline-block; /* Mostrar los elementos de la lista en línea */
-    white-space: nowrap; /* Evitar saltos de línea en palabras largas */
-    margin-right: 10px; /* Espacio entre los elementos de la lista */
     font-size: 12px;
   }
 
   .card-text {
-    font-size: 8px; /* Ajustar el tamaño de fuente para las cards en pantallas más pequeñas */
+    font-size: 8px;
   }
 
   .slide {
-    font-size: 8px; /* Ajustar el tamaño de fuente para los slides en pantallas más pequeñas */
+    font-size: 8px;
   }
 
   .contenido {
@@ -364,65 +273,24 @@ footer img {
   }
 
   main {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: rgb(186, 236, 182);
+    width: 100%;
   }
-
-  section {
-    width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-    background-color: antiquewhite;
-  }
-
 }
 
-
-
 @media (min-width: 300px) and (max-width: 390px) {
- 
-  .logo{
-  width: 10%;
-  height: 10%;
- }
-
-
-  .menu_item ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
   .menu_item li {
-    display: inline-block; /* Mostrar los elementos de la lista en línea */
-    white-space: nowrap; /* Evitar saltos de línea en palabras largas */
-    margin-right: 8px; /* Espacio entre los elementos de la lista */
     font-size: 10px;
-  }
-  
-  .menu_item a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .caption {
-font-size: 24px;
-
   }
 
   .card-text {
     font-size: 6px;
-}
-.contenido {
-  flex-direction: column;
-}
+  }
 
-main {
-  width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-  background-color: rgb(186, 236, 182);
-}
+  .contenido {
+    flex-direction: column;
+  }
 
-section {
-  width: 100%; /* Corregir el ancho completo del main en pantallas más pequeñas */
-  background-color: antiquewhite;
-}
-
+  main {
+    width: 100%;
+  }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8" />
     <title>Home</title>
@@ -9,98 +8,116 @@
     <link rel="icon" href="bigotes.png">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
-
 <body>
-  <header>
-      <div class="fondo">
-          <img class="logo" src="LogoHome.png" alt="Es un Logo">
-          <div class="menu_item">
-              <a href="#">Home</a>
-              <a href="./Registrate.html">Registrate</a>
-              <a href="./Tipos de Conejos.html">Tipos de Conejos</a>
-              <a href="Base Alimentacion.html">Cuidados y Alimentación</a>
-          </div>
-      </div>
-  </header>
-
-  <div class="carousel">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    
-    <div class="slides">
-        <div class="slide">
-            <img src="nnn.jpg" alt="Imagen 1">
-            <div class="caption">Los Conejos como Mascotas</div>
-        </div>
-        <div class="slide"><img src="nnn2.jpg" alt="Imagen 2"></div>
-        <div class="slide"><img src="1a.jpg" alt="Imagen 3"></div>
-    </div>
-    
-    <div class="navigation">
-        <label for="slide1" class="dot"></label>
-        <label for="slide2" class="dot"></label>
-        <label for="slide3" class="dot"></label>
-    </div>
-  </div>
-
-  <div class="contenido">
-    <article>
-        <h2>Conejitos rescatados</h2>
-        <div class="carouselcone">
-            <input type="radio" name="slidescone" id="slide1cone" checked>
-            <input type="radio" name="slidescone" id="slide2cone">
-            <input type="radio" name="slidescone" id="slide3cone">
-            <input type="radio" name="slidescone" id="slide4cone">
-          
-
-            <div class="slidescone">
-                <div class="slidecone">
-                    <div class="card">
-                        <img src="KitKat.png" alt="Conejo 1">
-                        <div class="card-text">Kit Kat</div>
-                    </div>
-                    <div class="card">
-                        <img src="Arandano.png" alt="Conejo 2">
-                        <div class="card-text">Arándano</div>
-                    </div>
-                    <div class="card">
-                        <img src="Rodhesia.jpg" alt="Conejo 3">
-                        <div class="card-text">Rodhesia</div>
-                    </div>
-                    <div class="card">
-                        <img src="foto4.jpg" alt="Conejo 4">
-                        <div class="card-text">Conejo de raza D</div>
-                    </div>
-                </div>
-               
-    
-            <div class="navigation">
-                <label for="slide1cone" class="dotcone"></label>
-                <label for="slide2cone" class="dotcone"></label>
+    <header>
+        <div class="fondo">
+            <img class="logo" src="LogoHome.png" alt="Es un Logo">
+            <div class="menu_item">
+                <a href="#">Home</a>
+                <a href="./Registrate.html">Registrate</a>
+                <a href="./Tipos de Conejos.html">Tipos de Conejos</a>
+                <a href="Base Alimentacion.html">Cuidados y Alimentación</a>
             </div>
         </div>
-    </article>
+    </header>
 
-
-    <aside>
-        <h4>Ubícanos</h4>
-        <p>
-            <a href="https://goo.gl/maps/A8smte1esMbejFTy8">Villa Devoto</a>
-        </p>
-        <div class="Maps">
-            <iframe src="https://www.google.com/maps/embed?pb=..." style="border:0;" allowfullscreen="" loading="lazy" width="150px" height="200px"></iframe>
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="Bunny1.jpg" alt="Imagen 1">
+                <div class="caption">Los Conejos como Mascotas</div>
+            </div>
+            <div class="slide">
+                <img src="Bunny2.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="Bunny3.jpg" alt="Imagen 3">
+            </div>
         </div>
-    </aside>
-</div>
 
+        <!-- Botones de navegación debajo de las imágenes (sin duplicar los radios) -->
+        <div class="navigation">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </div>
 
-  <footer>
-      <a href="https://es-la.facebook.com/"><img src="Facebook2.JPG" alt="Logo de facebook"></a>
-      <a href="https://twitter.com/?lang=es"><img src="Twitter.jpg" alt="Logo de Twitter"></a>
-      <a href="https://www.instagram.com/srbigotesmv/"><img src="Instagram.jpg" alt="Logo de Instagram"></a>
-      <br>
-      <b>Derechos reservados</b>
-  </footer>
+    <main style="background-color: #a0d7a1;">
+        <div class="contenido">
+            <h2>Conejitos rescatados</h2>
+
+            <div class="carouselcone">
+                <!-- Carrusel de Cards -->
+                <div class="cards-container">
+                    <div class="slidecone">
+                        <!-- Tarjetas horizontal -->
+                        <div class="card">
+                            <img src="KitKat.png" alt="Conejo 1">
+                            <div class="card-text">Kit Kat</div>
+                        </div>
+                        <div class="card">
+                            <img src="Arandano.png" alt="Conejo 2">
+                            <div class="card-text">Arándano</div>
+                        </div>
+                        <div class="card">
+                            <img src="Rodhesia.jpg" alt="Conejo 3">
+                            <div class="card-text">Rodhesia</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 4">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 5">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                    </div>
+
+                    <div class="slidecone">
+                        <!-- Más cards  -->
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 6">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 7">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 8">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 9">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                        <div class="card">
+                            <img src="Guayaba.jpg" alt="Conejo 10">
+                            <div class="card-text">Conejo de raza D</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de las flechas -->
+                <button id="prevBtn" class="carousel-btn">←</button>
+                <button id="nextBtn" class="carousel-btn">→</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logos">
+            <a href="https://es-la.facebook.com/"><img src="Facebook2.JPG" alt="Logo de facebook"></a>
+            <a href="https://twitter.com/?lang=es"><img src="Twitter.jpg" alt="Logo de Twitter"></a>
+            <a href="https://www.instagram.com/srbigotesmv/"><img src="Instagram.jpg" alt="Logo de Instagram"></a>
+        </div>
+        <b>Derechos reservados</b>
+    </footer>
+
+    <script src="scriptinicio.js"></script>
 </body>
 </html>
