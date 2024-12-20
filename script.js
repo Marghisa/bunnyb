@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function toggleVisibility(cardToHide, cardToShow) {
     const cardOne = document.querySelector('.one');
     const cardThree = document.querySelector('.three');
@@ -28,7 +27,7 @@ function toggleVisibility(cardToHide, cardToShow) {
             cardOne.classList.add('show');
         }
     }
-=======
+
 function toggleVisibility(cardToHide, cardToShow) {
     const cardOne = document.querySelector('.one');
     const cardThree = document.querySelector('.three');
@@ -58,5 +57,4 @@ function toggleVisibility(cardToHide, cardToShow) {
             cardOne.classList.add('show');
         }
     }
->>>>>>> 9d8877119175222f5975a9975799e8f47a0c147d
 }
