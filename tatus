@@ -1,0 +1,92 @@
+[33mcommit c67eda689fdf99315ed5cc28d41b3a786843534b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Fri Dec 20 19:35:40 2024 -0300
+
+    Corregir lógica de visibilidad de las imágenes y tarjetas
+
+[33mcommit 22c691435a44a3b1d428df84a426a7f8dc1b273f[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Fri Dec 20 19:15:55 2024 -0300
+
+    Mensaje descriptivo sobre los cambios
+
+[33mcommit 23f3bb8ff17575a489c47d4c1c0f9e7a77b83c7d[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Fri Dec 20 16:31:56 2024 -0300
+
+    first commit
+
+[33mcommit 2bb8805aff32037df2be7537421aa5a7b9c92c0f[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Fri Dec 20 16:22:31 2024 -0300
+
+    first commit
+
+[33mcommit d5c1f17f7a22795b48b3aeaceef79f55956e01af[m
+Merge: 5dbb22e 9d88771
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Wed Dec 18 17:00:34 2024 -0300
+
+    Resolver conflictos
+
+[33mcommit 5dbb22e54b527d3291707fb2f5f9458ca40b429d[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Wed Dec 18 16:59:11 2024 -0300
+
+    Reemplazar archivo [index.html]
+
+[33mcommit 9d8877119175222f5975a9975799e8f47a0c147d[m
+Author: Marghisa <113646095+Marghisa@users.noreply.github.com>
+Date:   Wed Dec 18 16:51:57 2024 -0300
+
+    Add files via upload
+
+[33mcommit dc8d56194124a12760b611ad5eaac5bcc178a889[m
+Author: Marghisa <113646095+Marghisa@users.noreply.github.com>
+Date:   Thu Nov 14 21:56:55 2024 -0300
+
+    Update README.md
+
+[33mcommit 5e783e0ca60e41c2ef27f3a0a37d7d32f2830820[m
+Merge: 7b22c22 2b45491
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Thu Nov 14 21:24:53 2024 -0300
+
+    Merge branch 'master' of https://github.com/Marghisa/Bunny
+     especially if it merges an updated upstream into a topic branch.
+
+[33mcommit 7b22c22e8964ec183d2228be3d22116ab18b5f83[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Thu Nov 14 21:23:15 2024 -0300
+
+    Renombrado Index.html a index.html en minúsculas
+
+[33mcommit 2b45491f8403fa6c89713c83b1ef46c5deb3847c[m
+Author: Marghisa <113646095+Marghisa@users.noreply.github.com>
+Date:   Thu Nov 14 20:56:31 2024 -0300
+
+    Create README.md
+    
+    # Bigotes 🐰
+    
+    **Bigotes** es un proyecto dedicado a la **educación y cuidado de conejos**. Este sitio web tiene como objetivo proporcionar información sobre la
+    **alimentación**, **cuidado** y **bienestar** de los conejos, especialmente aquellos que han sido **rescatados** en la ciudad de **CABA, Argentina**.
+    Además, mostramos historias de conejos que han sido rescatados, ofreciendo visibilidad y apoyo para futuras adopciones.
+    
+    ## Descripción
+    
+    El proyecto **Bigotes** está diseñado para ser una **plataforma educativa y social** para las personas que tienen o están pensando en tener conejos
+    como mascotas. A través de esta página, los usuarios aprenderán sobre:
+    
+    - Los **alimentos adecuados** para los conejos.
+    - **Consejos de cuidado diario**.
+    - **Historias inspiradoras** de conejos rescatados en CABA, Argentina.
+    - **Cómo adoptar un conejo rescatado**.
+    
+    Este proyecto tiene como objetivo mejorar la vida de los conejos y ayudar a las personas a comprender mejor sus necesidades.
+
+[33mcommit e31a935081170c87697b9b5f228674981755e0aa[m
+Author: Marghisa <marghioryflowers@gmail.com>
+Date:   Thu Nov 14 20:48:47 2024 -0300
+
+    Primer commit - Archivos del proyecto
