@@ -4,57 +4,27 @@ function toggleVisibility(cardToHide, cardToShow) {
     const imageTwo = document.querySelector('.two');
     const imageFour = document.querySelector('.four');
 
-    // Si se hace clic en la tarjeta "one"
+    // Si se hace clic en la tarjeta "one" (se espera mostrar la imagen 'two' y ocultar 'four')
     if (cardToShow === '.two') {
-        // Si la card one ya se ha clickeado, vuelve a su posición inicial
+        // Si la imagen 'two' ya está visible, vuelve a su posición inicial
         if (imageTwo.classList.contains('show')) {
             imageTwo.classList.remove('show');
-            cardThree.classList.remove('show');
+            cardThree.classList.remove('show');  // Ocultamos la card tres
         } else {
             imageTwo.classList.add('show');
-            cardThree.classList.add('show');
+            cardThree.classList.add('show');  // Mostramos la card tres
         }
     }
 
-    // Si se hace clic en la tarjeta "three"
+    // Si se hace clic en la tarjeta "three" (se espera mostrar la imagen 'four' y ocultar 'two')
     if (cardToShow === '.four') {
-        // Si la card three ya se ha clickeado, vuelve a su posición inicial
+        // Si la imagen 'four' ya está visible, vuelve a su posición inicial
         if (imageFour.classList.contains('show')) {
             imageFour.classList.remove('show');
-            cardOne.classList.remove('show');
+            cardOne.classList.remove('show');  // Ocultamos la card one
         } else {
             imageFour.classList.add('show');
-            cardOne.classList.add('show');
-        }
-    }
-
-function toggleVisibility(cardToHide, cardToShow) {
-    const cardOne = document.querySelector('.one');
-    const cardThree = document.querySelector('.three');
-    const imageTwo = document.querySelector('.two');
-    const imageFour = document.querySelector('.four');
-
-    // Si se hace clic en la tarjeta "one"
-    if (cardToShow === '.two') {
-        // Si la card one ya se ha clickeado, vuelve a su posición inicial
-        if (imageTwo.classList.contains('show')) {
-            imageTwo.classList.remove('show');
-            cardThree.classList.remove('show');
-        } else {
-            imageTwo.classList.add('show');
-            cardThree.classList.add('show');
-        }
-    }
-
-    // Si se hace clic en la tarjeta "three"
-    if (cardToShow === '.four') {
-        // Si la card three ya se ha clickeado, vuelve a su posición inicial
-        if (imageFour.classList.contains('show')) {
-            imageFour.classList.remove('show');
-            cardOne.classList.remove('show');
-        } else {
-            imageFour.classList.add('show');
-            cardOne.classList.add('show');
+            cardOne.classList.add('show');  // Mostramos la card one
         }
     }
 }
