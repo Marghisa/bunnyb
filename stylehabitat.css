@@ -1,0 +1,232 @@
+/* Estilo del encabezado */
+header {
+    background-color: rgba(228, 224, 226, 0.885);
+    height: 70px;
+}
+
+/* Estilo del botón */
+button {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    align-items: flex-start;
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+}
+
+/* Estilo del cuerpo */
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    background-image: url("Fondo3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los títulos */
+h3 {
+    font-size: 30px; 
+    color: #512305;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Sofia", sans-serif;
+    margin-right: 15%;
+    margin-left: 10%;
+}
+
+/* Estilo del párrafo */
+p {
+    font-size: 15px; 
+    color: #340505; 
+    text-align: justify; 
+    font-family: "Sofia";
+    margin: 0;
+}
+
+/* Estilo del contenedor de la cuadrícula */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat( 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-left: 5%;
+    margin-right: 5%;
+    color:  #933838;
+}
+
+/* Estilo de la primera columna */
+.one {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    text-align: justify;
+    width: 60%;
+}
+
+/* Estilo de la segunda columna */
+.two {
+    grid-column: 6 / 12;
+    grid-row: 1;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    width: 40%;
+}
+
+/* Estilo de las imágenes */
+img {
+    width: 400px;
+    height: 330px;
+    border-radius: 5%;
+}
+
+/* Estilo del contenedor de personajes */
+#personajes {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: rgba(203, 183, 193, 0.885);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+}
+
+footer img {
+    height: 50px;
+    width: 100px;
+    float: left; 
+}
+
+/* Estilo del botón cargador */
+#cargarPersonajesBtn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto; /* Centrar el botón */
+    background-color: #512305;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#cargarPersonajesBtn:hover {
+    background-color: #340505;
+}
+
+#cargarPersonajesBtn:focus {
+    outline: none;
+}
+
+/* Media Queries para pantallas pequeñas */
+
+@media (min-width:375px) and (max-width:414px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat( 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(5px, auto);
+    }
+    
+    .one {
+        grid-column: 1 / 12;
+        grid-row: 2;
+        justify-content: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .two {
+        grid-column: 1 / 12;
+        grid-row: 3;
+        margin: 5%;
+        padding-top: 5%;
+        justify-content: center;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 15px; 
+        text-align: center; 
+        margin-bottom: 0;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: 250px;
+    }
+
+    footer img {
+        height: 50px;
+        width: 150px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 5%;
+    }
+
+    button {
+        font-size: 10px;
+    }
+
+    .container {
+        margin: 0px auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container2 {
+        margin: 0px auto;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
+}
+
+@media (min-width:415px) and (max-width:540px) {
+    /* Similar to the previous media query but with larger sizes */
+}
+
+@media (min-width:541px) and (max-width:768px) {
+    /* Similar to the previous media query but with larger sizes */
+}
+
+@media (min-width:769px) and (max-width:920px) {
+    /* Similar to the previous media query but with larger sizes */
+}
+
+@media (min-width:921px) and (max-width:1028px) {
+    /* Similar to the previous media query but with larger sizes */
+}
+
+@media (min-width:1029px) and (max-width:1280px) {
+    /* Similar to the previous media query but with larger sizes */
+}
+
+@media (min-width:1281px) and (max-width:1500px) {
+    /* Similar to the previous media query but with larger sizes */
+}

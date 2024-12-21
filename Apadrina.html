@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Apadrina un Conejito</title>
+    <link rel="stylesheet" href="styleapadrina.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="icon" href="bigotes.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        <button> <a href="./index.html"><b>Volver</b></a></button>
+        <div class="header-container">
+            <div class="logo-container">
+                <img class="logo" src="LogoHome.png" alt="Logo del sitio">
+            </div>
+        </div>
+    </header>
+
+    <main style="background-color: #a0d7a1;">
+        <div class="contenido">
+            <h2>Apadrina a un Conejito</h2>
+            <div class="cards-container">
+                <!-- Fila 1 -->
+                <div class="card">
+                    <img src="Bigotes.jpg" alt="Conejo Bigotes">
+                    <div class="card-text">Bigotes</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Bigotes">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Oliver.jpg" alt="Conejo Oliver">
+                    <div class="card-text">Oliver</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Oliver">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Rodhesia.jpg" alt="Conejo Rhodesia">
+                    <div class="card-text">Rodhesia</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Rodhesia">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Guayaba.jpg" alt="Conejo Guayaba">
+                    <div class="card-text">Guayaba</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Guayaba">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="KitKat.png" alt="Conejo Kit Kat">
+                    <div class="card-text">Kit Kat</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Kit Kat">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="cards-container">
+                <div class="card">
+                    <img src="Bubu.jpg" alt="Conejo Bubu">
+                    <div class="card-text">Bubu</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Bubu">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Atenea.jpg" alt="Conejo Atenea">
+                    <div class="card-text">Atenea</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Atenea">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Clarita.jpg" alt="Conejo Clarita">
+                    <div class="card-text">Clarita</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Clarita">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Bambi.jpg" alt="Conejo Bambi">
+                    <div class="card-text">Bambi</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Bambi">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="Arandano.png" alt="Conejo Arándano">
+                    <div class="card-text">Arándano</div>
+                    <input type="number" class="donation-amount" placeholder="Monto en pesos" min="1">
+                    <button class="add-to-cart" data-name="Arándano">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <!-- Contenedor del carrito -->
+            <div class="carrito-container">
+                <h3>Carrito</h3>
+                <div id="cart-details"></div>
+                <button id="checkout">Realizar Pago</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="LogoHome.png" alt="Logo">
+    </footer>
+
+    <script src="scriptapadrina.js"></script>
+</body>
+</html>

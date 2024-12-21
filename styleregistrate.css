@@ -21,6 +21,15 @@ h2 {
     text-align: center; /* Centrar el título */
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    align-items: flex-start;
+    font-size: 15px;
+    font-family: "Playfair Display", serif;
+}
+
 form {
     background-color: rgb(238, 171, 116); /* Fondo Naranja */
     padding: 20px;
@@ -94,6 +103,25 @@ footer {
         background-color: rgb(229, 191, 191);
     }
 }
+
+@media screen and (max-width: 1366px) {
+    form {
+        margin-bottom: 50px; /* Espacio adicional debajo del formulario */
+    }
+
+    footer {
+        position: relative; /* Asegura que el footer no se quede pegado */
+    }
+
+    footer img {
+        height: 50px;
+        width: 70px;
+    }
+
+}
+
+
+
 
 @media screen and (max-width: 1280px) {
     body {

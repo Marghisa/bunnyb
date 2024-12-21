@@ -14,7 +14,7 @@ body {
 header {
   background-color: #d49ebf;
   color: white;
-  padding: 10px 0;
+  padding: 8px 0;
   text-align: left; /* Cambié de center a left */
   transition: background-color 0.3s ease;
   border: none; /* Quitar el borde del header */
@@ -73,6 +73,7 @@ header.scrolled {
   font-size: 4.5em;
   font-weight: bold;
   text-align: center;
+  font-size: 20;
 }
 
 
@@ -130,7 +131,7 @@ header.scrolled {
 h2 {
   font-size: 2em;
   font-weight: bold;
-  color: #ece4e4; 
+  color: white; 
 }
 
 /* Botones de navegación */
@@ -194,8 +195,8 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: rgb(210, 195, 207);
-  color: white;
+  background-color: rgba(203, 183, 193, 0.885);
+  color: black;
   text-align: center;
   padding: 10px;
 }
@@ -207,30 +208,26 @@ footer .footer-logos {
 }
 
 footer .footer-logos img {
-  width: 30px;
+  width: 20px;
   height: auto;
 }
 
 footer b {
-  font-size: 1.2em;
+  font-size: 5 px;
 }
 
 /* Media Queries */
+@media (max-width: 1366px) {
+  .menu_item {
+    font-size: 20px;
+  }
+}
 @media (max-width: 1280px) {
   .menu_item {
     font-size: 10px;
   }
 }
 
-@media (max-width: 1024px) {
-  .contenido {
-    flex-direction: column;
-  }
-
-  main {
-    width: 100%;
-  }
-}
 
 @media (max-width: 930px) {
   .contenido {
@@ -239,6 +236,7 @@ footer b {
 
   main {
     width: 100%;
+    margin-bottom: 40px;
   }
 }
 
@@ -249,35 +247,37 @@ footer b {
   }
 }
 
-@media (min-width: 400px) and (max-width: 430px) {
-  .menu_item ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu_item li {
-    font-size: 12px;
-  }
-
-  .card-text {
-    font-size: 8px;
-  }
-
-  .slide {
-    font-size: 8px;
-  }
-
-  .contenido {
-    flex-direction: column;
-  }
-
-  main {
-    width: 100%;
+@media (max-width: 540px) {
+  .caption {
+    font-size: 18px; 
   }
 }
 
-@media (min-width: 300px) and (max-width: 390px) {
+@media (max-width: 412px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .slide img    {
+    height: 400px;
+  }
+
+  .contenido {
+    flex-grow: 1; /* Asegura que el contenido ocupe todo el espacio disponible */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: 0; /* Elimina cualquier margen adicional */
+    padding: 10px;
+    margin-bottom: 0; /* Elimina el margen inferior */
+  }
+
   .menu_item li {
     font-size: 10px;
   }
@@ -286,11 +286,69 @@ footer b {
     font-size: 6px;
   }
 
-  .contenido {
+  main {
+    width: 100%;
+    flex-grow: 1; /* Asegura que el main ocupe el espacio restante */
+  }
+
+  .card {
+    background-color: #e6ede9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(24% - 10px); /* 5 cards by row */
+    margin: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 85px;
+  }
+
+
+@media (min-width: 300px) and (max-width: 390px) {
+  /* Asegurarse de que el contenido ocupe toda la pantalla */
+  body {
+    display: flex;
     flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .contenido {
+    flex-grow: 1; /* Asegura que el contenido ocupe todo el espacio disponible */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: 0; /* Elimina cualquier margen adicional */
+    padding: 10px;
+    margin-bottom: 0; /* Elimina el margen inferior */
+  }
+
+  .menu_item li {
+    font-size: 10px;
+  }
+
+  .card-text {
+    font-size: 6px;
   }
 
   main {
     width: 100%;
+    flex-grow: 1; /* Asegura que el main ocupe el espacio restante */
   }
+
+  .card {
+    background-color: #e6ede9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(24% - 10px); /* 5 cards by row */
+    margin: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 60px;
+  }
+
+
 }
+
