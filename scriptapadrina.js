@@ -2,9 +2,16 @@ const cartDetails = document.getElementById("cart-details");
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 const checkoutButton = document.getElementById("checkout");
 
+// Inicializar el carrito de sessionStorage con datos de localStorage
+function initializeCart() {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    sessionStorage.setItem("cart", JSON.stringify(savedCart));
+    renderCart();
+}
+
 // Renderizar carrito
 function renderCart() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
     cartDetails.innerHTML = "";
 
     if (cart.length === 0) {
@@ -17,7 +24,7 @@ function renderCart() {
         const li = document.createElement("li");
         li.innerHTML = `
             ${item.name} - $${item.price}
-            <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index}, this.value)">
+            <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="quantity-input">
             <button onclick="removeItem(${index})">Eliminar</button>
         `;
         ul.appendChild(li);
@@ -28,6 +35,31 @@ function renderCart() {
     totalElement.textContent = `Total a donar: $${total}`;
     cartDetails.appendChild(ul);
     cartDetails.appendChild(totalElement);
+
+    // Agregar eventos a los campos de cantidad
+    const quantityInputs = document.querySelectorAll(".quantity-input");
+    quantityInputs.forEach((input) => {
+        input.addEventListener("change", handleQuantityChange);
+    });
+}
+
+// Manejar cambios en la cantidad
+function handleQuantityChange(event) {
+    const input = event.target;
+    const index = parseInt(input.dataset.index);
+    const newQuantity = parseInt(input.value);
+
+    if (isNaN(newQuantity) || newQuantity < 1) {
+        alert("La cantidad debe ser un número válido mayor o igual a 1.");
+        renderCart(); // Restaurar la cantidad previa en el render
+        return;
+    }
+
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
+    cart[index].quantity = newQuantity;
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    saveToLocalStorage(cart); // Sincronizar con localStorage
+    renderCart();
 }
 
 // Añadir al carrito
@@ -43,7 +75,7 @@ function addToCart(event) {
         return;
     }
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
     const existingItem = cart.find((item) => item.name === name);
 
     if (existingItem) {
@@ -52,29 +84,28 @@ function addToCart(event) {
         cart.push({ name, price, quantity: 1 });
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    renderCart();
-}
-
-// Actualizar cantidad
-function updateQuantity(index, value) {
-    const cart = JSON.parse(localStorage.getItem("cart"));
-    cart[index].quantity = parseInt(value);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    saveToLocalStorage(cart); // Guardar también en localStorage
     renderCart();
 }
 
 // Eliminar del carrito
 function removeItem(index) {
-    const cart = JSON.parse(localStorage.getItem("cart"));
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
     cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+    saveToLocalStorage(cart); // Guardar también en localStorage
     renderCart();
+}
+
+// Guardar el carrito en localStorage
+function saveToLocalStorage(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 // Realizar pago
 function checkout() {
-    const cart = JSON.parse(localStorage.getItem("cart"));
+    const cart = JSON.parse(sessionStorage.getItem("cart"));
     if (cart.length === 0) {
         alert("El carrito está vacío.");
         return;
@@ -82,11 +113,12 @@ function checkout() {
 
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     alert(`Gracias por tu donación de $${total}.`);
-    localStorage.removeItem("cart");
+    sessionStorage.removeItem("cart"); // Limpiar carrito de sessionStorage
+    localStorage.removeItem("cart"); // Limpiar carrito de localStorage (opcional)
     renderCart();
 }
 
 // Inicializar eventos
 addToCartButtons.forEach((button) => button.addEventListener("click", addToCart));
 checkoutButton.addEventListener("click", checkout);
-document.addEventListener("DOMContentLoaded", renderCart);
+document.addEventListener("DOMContentLoaded", initializeCart);
